@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Utilities by Anuj Gaba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400;700&family=Fraunces:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-obsidian: #080707;
+            --rich-espresso: #14110F;
+            --burnished-bronze: #A67C52;
+            --antique-gold: #D4AF37;
+            --champagne-highlight: #F7E7CE;
+            --metallic-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        }
+
+        body { 
+            font-family: 'Lexend Deca', sans-serif; 
+            background-color: var(--deep-obsidian); 
+            color: var(--champagne-highlight);
+        }
+
+        .serif-italic { font-family: 'Fraunces', serif; font-style: italic; }
+
+        .gold-text-metallic {
+            background: var(--metallic-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .tool-card {
+            background: var(--rich-espresso);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tool-card:hover {
+            border-color: var(--antique-gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .btn-outline-gold {
+            border: 1px solid var(--antique-gold);
+            color: var(--antique-gold);
+            transition: 0.3s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--antique-gold);
+            color: #000;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="py-8 px-8 border-b border-burnished-bronze/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="../" class="flex items-center gap-3 group">
+    <i class="fa-solid fa-arrow-left text-antique-gold transition-transform group-hover:-translate-x-2"></i>
+    <span class="text-[10px] font-bold tracking-[0.4em] uppercase text-burnished-bronze">Back to Portfolio</span>
+</a>
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase gold-text-metallic">Tools & Utilities</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="px-8 py-24 md:py-32 max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tighter">
+            Engineering for <br><span class="gold-text-metallic serif-italic">Productivity.</span>
+        </h1>
+        <p class="text-champagne-highlight/60 text-xl max-w-2xl mx-auto font-light leading-relaxed">
+            Focused on architecting tools & utilities that empower QA engineers and developers to automate the mundane and focus on the complex.
+        </p>
+    </header>
+
+    <main class="px-8 pb-32 max-w-7xl mx-auto">
+        <div class="tool-card p-10 md:p-16 relative overflow-hidden group">
+    <div class="absolute -top-10 -right-10 w-64 h-64 opacity-[0.07] group-hover:opacity-10 transition-opacity duration-700 pointer-events-none">
+        <img src="UTCG.png" alt="Tool Watermark" class="w-full h-full object-contain grayscale">
+    </div>
+    
+    <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
+        <div class="md:col-span-8">
+            
+            <h3 class="text-4xl md:text-5xl font-bold text-champagne-highlight mb-6">UI Test Case Generator</h3>
+            
+            <p class="text-champagne-highlight/70 text-lg leading-relaxed mb-8">
+                A browser-based powerhouse for the modern QA. This extension allows you to generate robust test cases and high-precision automation locators (XPath, CSS) directly from active web pages, eliminating the manual grind of DOM inspection.
+            </p>
+            
+            <ul class="space-y-4 mb-10">
+                <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
+                    <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                    <span>Edge, Chrome and Firefox Extension support</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
+                    <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                    <span>One-click Dynamic Test Case Generation</span>
+                </li>
+            </ul>
+
+            <div class="pt-6 border-t border-burnished-bronze/20">
+                <p class="text-[10px] uppercase tracking-widest text-burnished-bronze font-bold mb-4">Available for</p>
+                <div class="flex gap-6 text-2xl text-antique-gold/50">
+                    <i class="fa-brands fa-chrome hover:text-antique-gold transition-colors"></i>
+                    <i class="fa-brands fa-edge hover:text-antique-gold transition-colors"></i>
+                    <i class="fa-brands fa-firefox-browser hover:text-antique-gold transition-colors"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-4 flex justify-center">
+            <div class="relative p-2 border border-burnished-bronze/30 bg-black/20">
+                <img src="your-icon-filename.png" alt="UI Test Case Generator Icon" class="w-32 h-32 md:w-48 md:h-48 object-contain brightness-110">
+                <div class="absolute inset-0 border border-antique-gold/10 -m-2 pointer-events-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+		<br>
+		<br>
+		
+		<div class="tool-card p-10 md:p-16 relative overflow-hidden group">
+    <div class="absolute -top-10 -right-10 w-64 h-64 opacity-[0.07] group-hover:opacity-10 transition-opacity duration-700 pointer-events-none">
+        <img src="AUI.png" alt="Tool Watermark" class="w-full h-full object-contain grayscale">
+    </div>
+    
+    <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
+        <div class="md:col-span-8">
+            
+            <h3 class="text-4xl md:text-5xl font-bold text-champagne-highlight mb-6">Automation UI Inspector</h3>
+            
+            <p class="text-champagne-highlight/70 text-lg leading-relaxed mb-8">
+                A high-performance browser extension that automates the discovery and mapping of DOM elements for complex web architectures. It streamlines the transition from manual inspection to automated inspection through a precision-engineered technical interface.
+            </p>
+            
+            <ul class="space-y-4 mb-10">
+                <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
+                    <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                    <span>Edge, Chrome and Firefox Extension support</span>
+                </li>
+                <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
+                    <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                    <span>One-click Inspection of Full Page</span>
+                </li>
+            </ul>
+
+            <div class="pt-6 border-t border-burnished-bronze/20">
+                <p class="text-[10px] uppercase tracking-widest text-burnished-bronze font-bold mb-4">Available for</p>
+                <div class="flex gap-6 text-2xl text-antique-gold/50">
+                    <i class="fa-brands fa-chrome hover:text-antique-gold transition-colors"></i>
+                    <i class="fa-brands fa-edge hover:text-antique-gold transition-colors"></i>
+                    <i class="fa-brands fa-firefox-browser hover:text-antique-gold transition-colors"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-4 flex justify-center">
+            <div class="relative p-2 border border-burnished-bronze/30 bg-black/20">
+                <img src="your-icon-filename.png" alt="UI Test Case Generator Icon" class="w-32 h-32 md:w-48 md:h-48 object-contain brightness-110">
+                <div class="absolute inset-0 border border-antique-gold/10 -m-2 pointer-events-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <footer class="py-20 text-center border-t border-burnished-bronze/10">
+        <p class="text-burnished-bronze/40 text-[9px] tracking-[0.5em] uppercase">
+            © 2026 Tools & Utilities by Anuj Gaba
+        </p>
+    </footer>
+
+</body>
+</html>
