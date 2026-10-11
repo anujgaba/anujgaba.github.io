@@ -15,6 +15,8 @@
             --antique-gold: #D4AF37;
             --champagne-highlight: #F7E7CE;
             --metallic-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            --metallic-purple: linear-gradient(135deg, #6E4E9E, #C9B6F2, #7C5CBF, #DACDF7, #5E4194);
+            --royal-plum: #8B7AB8;
         }
 
         body { 
@@ -30,6 +32,34 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
+        }
+        .purple-text-metallic {
+            background: var(--metallic-purple);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            display: inline-block;
+        }
+
+        ::selection { background: #7C5CBF; color: #fff; }
+        .mp-border {
+            border-image: linear-gradient(135deg, #6E4E9E, #C9B6F2, #7C5CBF, #DACDF7, #5E4194) 1;
+        }
+        .tool-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--metallic-purple);
+        }
+
+
+        .chrome-link:hover .fa-chrome {
+            background: var(--metallic-purple);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .tool-card {
@@ -87,26 +117,26 @@
             
             <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
                 <div class="md:col-span-8">
-                    <h3 class="text-4xl md:text-5xl font-bold text-champagne-highlight mb-6">UI Test Case Generator</h3>
+                    <h3 class="text-4xl md:text-5xl font-bold serif-italic gold-text-metallic mb-6">UI Test Case Generator</h3>
                     <p class="text-champagne-highlight/70 text-lg leading-relaxed mb-8">
                         A browser-based powerhouse for the modern QA. This extension allows you to generate robust test cases and high-precision automation locators (XPath, CSS) directly from active web pages, eliminating the manual grind of DOM inspection.
                     </p>
                     
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
-                            <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                            <i class="fa-solid fa-circle-check text-xs purple-text-metallic"></i> 
                             <span>Chrome Extension support</span>
                         </li>
                         <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
-                            <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                            <i class="fa-solid fa-circle-check text-xs purple-text-metallic"></i> 
                             <span>One-click Dynamic Test Case Generation</span>
                         </li>
                     </ul>
 
-                    <div class="pt-6 border-t border-burnished-bronze/20">
-                        <p class="text-[10px] uppercase tracking-widest text-burnished-bronze font-bold mb-4">Available for</p>
+                    <div class="pt-6 border-t mp-border">
+                        <p class="text-[10px] uppercase tracking-widest font-bold mb-4 purple-text-metallic">Available for</p>
                         <div class="flex gap-6 text-2xl text-antique-gold/50">
-                            <a href="https://chromewebstore.google.com/detail/cgegfdphjmijjmnfkojpiekdgkndafga?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer">
+                            <a href="https://chromewebstore.google.com/detail/cgegfdphjmijjmnfkojpiekdgkndafga?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" class="chrome-link">
                                 <i class="fa-brands fa-chrome hover:text-antique-gold transition-colors"></i>
                             </a>
                         </div>
@@ -129,28 +159,28 @@
 
             <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
                 <div class="md:col-span-8">
-                    <h3 class="text-4xl md:text-5xl font-bold text-champagne-highlight mb-6">AureonTerm</h3>
+                    <h3 class="text-4xl md:text-5xl font-bold serif-italic gold-text-metallic mb-6">AureonTerm</h3>
                     <p class="text-champagne-highlight/70 text-lg leading-relaxed mb-8">
                         A sleek, high-performance terminal designed for seamless SSH, Serial, and Telnet connectivity. Built for developers and network administrators who need speed and reliability across platforms.
                     </p>
                     
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
-                            <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                            <i class="fa-solid fa-circle-check text-xs purple-text-metallic"></i> 
                             <span>Multi-Protocol support: SSH, Serial (COM ports), and Telnet</span>
                         </li>
                         <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
-                            <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                            <i class="fa-solid fa-circle-check text-xs purple-text-metallic"></i> 
                             <span>Hardware-accelerated rendering & customizable themes</span>
                         </li>
                         <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
-                            <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                            <i class="fa-solid fa-circle-check text-xs purple-text-metallic"></i> 
                             <span>Cross-platform continuity for Mac and Windows</span>
                         </li>
                     </ul>
 
-                    <div class="pt-6 border-t border-burnished-bronze/20">
-                        <p class="text-[10px] uppercase tracking-widest text-burnished-bronze font-bold mb-4">Download Installer</p>
+                    <div class="pt-6 border-t mp-border">
+                        <p class="text-[10px] uppercase tracking-widest font-bold mb-4 purple-text-metallic">Download Installer</p>
                         
                         <div class="flex flex-wrap gap-4 text-2xl text-antique-gold/50">
                             <a href="https://docs.google.com/uc?export=download&id=1_yGrGhiDsfb6olNoplmBEJuA2CZPBGkd" class="flex flex-col items-start gap-0.5 bg-burnished-bronze/10 border border-burnished-bronze/30 px-5 py-2 text-champagne-highlight hover:bg-antique-gold hover:text-black transition-all duration-200">
@@ -175,7 +205,7 @@
                 <div class="md:col-span-4 flex justify-center">
                     <div class="relative p-2 border border-burnished-bronze/30 bg-black/20">
                         <img src="aureonterm_icon.png" alt="AureonTerm Icon" class="w-32 h-32 md:w-48 md:h-48 object-contain brightness-110">
-                        <div class="absolute inset-0 border border-antique Gold/10 -m-2 pointer-events-none"></div>
+                        <div class="absolute inset-0 border border-antique-gold/10 -m-2 pointer-events-none"></div>
                     </div>
                 </div>
             </div>
@@ -188,26 +218,26 @@
             
             <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
                 <div class="md:col-span-8">
-                    <h3 class="text-4xl md:text-5xl font-bold text-champagne-highlight mb-6">Automation UI Inspector</h3>
+                    <h3 class="text-4xl md:text-5xl font-bold serif-italic gold-text-metallic mb-6">Automation UI Inspector</h3>
                     <p class="text-champagne-highlight/70 text-lg leading-relaxed mb-8">
                         A high-performance browser extension that automates the discovery and mapping of DOM elements for complex web architectures. It streamlines the transition from manual inspection to automated inspection through a precision-engineered technical interface.
                     </p>
                     
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
-                            <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                            <i class="fa-solid fa-circle-check text-xs purple-text-metallic"></i> 
                             <span>Chrome Extension support</span>
                         </li>
                         <li class="flex items-center gap-4 text-sm text-champagne-highlight/80">
-                            <i class="fa-solid fa-circle-check text-antique-gold text-xs"></i> 
+                            <i class="fa-solid fa-circle-check text-xs purple-text-metallic"></i> 
                             <span>One-click Inspection of Full Page</span>
                         </li>
                     </ul>
 
-                    <div class="pt-6 border-t border-burnished-bronze/20">
-                        <p class="text-[10px] uppercase tracking-widest text-burnished-bronze font-bold mb-4">Available for</p>
+                    <div class="pt-6 border-t mp-border">
+                        <p class="text-[10px] uppercase tracking-widest font-bold mb-4 purple-text-metallic">Available for</p>
                         <div class="flex gap-6 text-2xl text-antique-gold/50">
-                            <a href="https://chromewebstore.google.com/detail/mcemjfkgpfhkdhkboghgihcciimpjmfp?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer">
+                            <a href="https://chromewebstore.google.com/detail/mcemjfkgpfhkdhkboghgihcciimpjmfp?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" class="chrome-link">
                                 <i class="fa-brands fa-chrome hover:text-antique-gold transition-colors"></i>
                             </a>
                         </div>

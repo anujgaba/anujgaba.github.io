@@ -15,6 +15,7 @@
             --antique-gold: #D4AF37;
             --champagne-highlight: #F7E7CE;
             --metallic-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            --metallic-purple: linear-gradient(135deg, #6E4E9E, #C9B6F2, #7C5CBF, #DACDF7, #5E4194);
         }
 
         body { 
@@ -32,11 +33,33 @@
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
+        .purple-text-metallic {
+            background: var(--metallic-purple);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            display: inline-block;
+        }
+
+        ::selection { background: #7C5CBF; color: #fff; }
+        .mp-border {
+            border-image: linear-gradient(135deg, #6E4E9E, #C9B6F2, #7C5CBF, #DACDF7, #5E4194) 1;
+        }
 
         .experience-card {
+            position: relative;
             background: var(--rich-espresso);
             border: 1px solid rgba(212, 175, 55, 0.15);
             transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .experience-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--metallic-purple);
         }
 
         .experience-card:hover {
@@ -146,7 +169,7 @@
 
         <div class="grid md:grid-cols-2 gap-20">          
             <div>
-                <h2 class="gold-text-metallic font-bold tracking-widest uppercase text-xs mb-10 border-b border-antique-gold/20 pb-4">Engineering Stack</h2>
+                <h2 class="purple-text-metallic font-bold tracking-widest uppercase text-xs mb-10 border-b mp-border pb-4">Engineering Stack</h2>
                 <div class="flex flex-wrap gap-3">
                     <span class="skill-pill">Java & Python</span> <span class="skill-pill">Selenium & Appium</span>
                     <span class="skill-pill">Maven & TestNG</span> <span class="skill-pill">Robot Framework</span>
@@ -160,7 +183,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="gold-text-metallic font-bold tracking-widest uppercase text-xs mb-10 border-b border-antique-gold/20 pb-4">Strategic Leadership</h2>
+                <h2 class="purple-text-metallic font-bold tracking-widest uppercase text-xs mb-10 border-b mp-border pb-4">Strategic Leadership</h2>
                 <div class="flex flex-wrap gap-3">
                     <span class="skill-pill">Team Management</span> <span class="skill-pill">Mentorship & Coaching</span>
                     <span class="skill-pill">Cross-functional Collab</span> <span class="skill-pill">Resource Planning</span>
@@ -175,7 +198,7 @@
             </div>
         </div>
                  <div class="pt-2">
-                <h2 class="gold-text-metallic font-bold tracking-[0.4em] uppercase text-[12px] mb-10">AI-Assisted Engineering</h2>
+                <h2 class="purple-text-metallic font-bold tracking-[0.4em] uppercase text-[12px] mb-10">AI-Assisted Engineering</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="p-6 bg-rich-espresso/50 border border-burnished-bronze/20">
                         <h4 class="text-[#D4AF37] font-bold text-xs uppercase tracking-widest mb-4 italic">Automation & Coding</h4>
@@ -205,12 +228,12 @@
                         <h4 class="text-3xl font-bold text-champagne-highlight mb-2">Senior Staff QA Engineer</h4>
                         <p class="text-[#A67C52] serif-italic text-xl mb-8">Guard RFID Solutions (part of HID Global)</p>
                         <ul class="space-y-6 text-champagne-highlight/60 text-sm leading-relaxed">
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Department Founding & Leadership:</strong> Architected the QA department as the sole founding engineer; managed all testing operations single-handedly for 5 years before scaling the team and establishing organization-wide KPIs, standards, and resource strategies.</span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Automation Framework:</strong> Designed and deployed a scalable Java, Selenium, and Appium suite, reducing manual regression effort by 40%. Perfomed regular security compliance checks by conducting vulnerability scans (DAP/Burp Proxy).</span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Project Governance:</strong> Orchestrated QA delivery for 26 concurrent Agile projects, ensuring 100% on-time release cycles through strategic task prioritization.</span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Modernization:</strong> Led the migration of legacy local testing to Browserstack (Cloud), enabling parallel execution and reducing test cycle time by 50%.</span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Risk-Based Testing:</strong> Implemented a risk-based testing strategy for critical RFID security firmware, ensuring high reliability for HID Global’s enterprise-level hardware deployments.</span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Hardware Validation:</strong> Expanded testing capabilities by automating UART/LoRa log analysis for hardware devices.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Department Founding & Leadership:</strong> Architected the QA department as the sole founding engineer; managed all testing operations single-handedly for 5 years before scaling the team and establishing organization-wide KPIs, standards, and resource strategies.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Automation Framework:</strong> Designed and deployed a scalable Java, Selenium, and Appium suite, reducing manual regression effort by 40%. Performed regular security compliance checks by conducting vulnerability scans (ZAP/Burp Proxy).</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Project Governance:</strong> Orchestrated QA delivery for 26 concurrent Agile projects, ensuring 100% on-time release cycles through strategic task prioritization.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Modernization:</strong> Led the migration of legacy local testing to BrowserStack (Cloud), enabling parallel execution and reducing test cycle time by 50%.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Risk-Based Testing:</strong> Implemented a risk-based testing strategy for critical RFID security firmware, ensuring high reliability for HID Global’s enterprise-level hardware deployments.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Hardware Validation:</strong> Expanded testing capabilities by automating UART/LoRa log analysis for hardware devices.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -223,9 +246,9 @@
                         <h4 class="text-3xl font-bold text-champagne-highlight mb-2">Senior Software Test Engineer</h4>
                         <p class="text-[#A67C52] serif-italic text-xl mb-8">Bharti Airtel</p>
                         <ul class="space-y-6 text-champagne-highlight/60 text-sm leading-relaxed">
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>High-Scale Engineering:</strong> Developed an enterprise-level automation framework using Java, TestNG, and JMeter to support a 97M subscriber base. </span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Business Impact::</strong> Optimized sanity and performance testing scripts that contributed to an $18M profit increase by stabilizing high-traffic revenue streams.</span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Collaboration:</strong> Acted as the technical bridge between DevOps and QA to integrate automated suites into the Jenkins CI/CD pipeline.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>High-Scale Engineering:</strong> Developed an enterprise-level automation framework using Java, TestNG, and JMeter to support a 97M subscriber base. </span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Business Impact:</strong> Optimized sanity and performance testing scripts that contributed to an $18M profit increase by stabilizing high-traffic revenue streams.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Collaboration:</strong> Acted as the technical bridge between DevOps and QA to integrate automated suites into the Jenkins CI/CD pipeline.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -238,9 +261,9 @@
                         <h4 class="text-3xl font-bold text-champagne-highlight mb-2">Software Testing Specialist</h4>
                         <p class="text-[#A67C52] serif-italic text-xl mb-8">Comptel Communications</p>
                         <ul class="space-y-6 text-champagne-highlight/60 text-sm leading-relaxed">
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>People Management:</strong> Led an 8-member international QA team, achieving zero-defect deliveries for major telecommunications releases. </span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>API Testing:</strong> Built an automated framework for API Provisioning using SOAP UI and Java, streamlining the validation of complex backend workflows.</span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Global Delivery:</strong> Managed on-site packaging and release processes during a 3-month assignment in Malaysia.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>People Management:</strong> Led an 8-member international QA team, achieving zero-defect deliveries for major telecommunications releases. </span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>API Testing:</strong> Built an automated framework for API Provisioning using SOAP UI and Java, streamlining the validation of complex backend workflows.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Global Delivery:</strong> Managed on-site packaging and release processes during a 3-month assignment in Malaysia.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -253,8 +276,8 @@
                         <h4 class="text-3xl font-bold text-champagne-highlight mb-2">Software Test Analyst</h4>
                         <p class="text-[#A67C52] serif-italic text-xl mb-8">Dell International Services</p>
                         <ul class="space-y-6 text-champagne-highlight/60 text-sm leading-relaxed">
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Tool Development:</strong> Engineered a custom migration framework tool in Java to facilitate complex technology upgrades across Dell’s infrastructure. </span></li>
-                            <li class="flex gap-4"><i class="fa fa-caret-right text-[#D4AF37] mt-1"></i><span><strong>Mentorship:</strong> Trained 16 new hires on Robot Framework and Postman, establishing a high standard for automation within the department.</span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Tool Development:</strong> Engineered a custom migration framework tool in Java to facilitate complex technology upgrades across Dell’s infrastructure. </span></li>
+                            <li class="flex gap-4"><i class="fa fa-caret-right mt-1 purple-text-metallic"></i><span><strong>Mentorship:</strong> Trained 16 new hires on Robot Framework and Postman, establishing a high standard for automation within the department.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -271,24 +294,24 @@
         <div class="grid md:grid-cols-12 gap-16 items-start">
             <div class="md:col-span-5 space-y-12">
                 <div>
-                    <h3 class="text-[#D4AF37] font-bold text-xs uppercase tracking-[0.3em] mb-6">Expertise Pillars</h3>
+                    <h3 class="purple-text-metallic font-bold text-xs uppercase tracking-[0.3em] mb-6">Expertise Pillars</h3>
                     <ul class="space-y-6">
                         <li class="flex items-start gap-4">
-                            <span class="text-[#D4AF37] mt-1"><i class="fa-solid fa-chess-knight"></i></span>
+                            <span class="purple-text-metallic mt-1"><i class="fa-solid fa-chess-knight"></i></span>
                             <div>
                                 <p class="text-champagne-highlight font-bold text-sm uppercase">Test Strategy & Planning</p>
                                 <p class="text-[#A67C52]/60 text-xs">Mastering the art of high-level QA governance, risk assessment, and resource mapping.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-[#D4AF37] mt-1"><i class="fa-solid fa-microscope"></i></span>
+                            <span class="purple-text-metallic mt-1"><i class="fa-solid fa-microscope"></i></span>
                             <div>
                                 <p class="text-champagne-highlight font-bold text-sm uppercase">Advanced Manual Testing</p>
                                 <p class="text-[#A67C52]/60 text-xs">Exploratory testing techniques, edge-case discovery, and the psychology of quality.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="text-[#D4AF37] mt-1"><i class="fa-solid fa-diagram-project"></i></span>
+                            <span class="purple-text-metallic mt-1"><i class="fa-solid fa-diagram-project"></i></span>
                             <div>
                                 <p class="text-champagne-highlight font-bold text-sm uppercase">Automation Architecture</p>
                                 <p class="text-[#A67C52]/60 text-xs">Transitioning from manual to automated workflows using industry-standard frameworks.</p>
@@ -300,7 +323,7 @@
 
             <div class="md:col-span-7">
                 <div class="bg-rich-espresso p-10 border-2 border-burnished-bronze/30 shadow-2xl relative">
-                    <div class="absolute -top-4 -right-4 bg-antique-gold text-black text-[10px] font-black px-6 py-2 tracking-widest uppercase shadow-xl">
+                    <div class="absolute -top-4 -right-4 text-white text-[10px] font-black px-6 py-2 tracking-widest uppercase shadow-xl" style="background:var(--metallic-purple)">
                         Apply Now
                     </div>
                     
@@ -333,6 +356,44 @@
     </div>
 </section>
 
+    <section id="testimonials" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-light mb-6 tracking-tighter">
+                <span class="gold-text-metallic serif-italic">Testimonials</span>
+            </h2>
+            <p class="text-champagne-highlight/60 text-lg font-light mb-20 max-w-2xl">What colleagues and leaders say about working with me.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+            <div class="experience-card p-12">
+                <i class="fa-solid fa-quote-left text-2xl mb-6 purple-text-metallic"></i>
+                <p class="text-champagne-highlight/60 text-sm leading-relaxed font-light">&ldquo;Anuj is one of the best QA I have ever worked with. He is a detailed and thorough QA professional. He is also a nice person and easy to get along with.&rdquo;</p>
+                <div class="mt-8 pt-6 border-t mp-border">
+                    <p class="text-champagne-highlight font-bold text-sm">Jay Hu</p>
+                    <p class="text-[#A67C52] text-xs mt-1">Sr. Software Development Manager</p>
+                    <p class="text-[#A67C52]/60 text-[10px] uppercase tracking-widest mt-2">Senior colleague &middot; LinkedIn recommendation</p>
+                </div>
+            </div>
+            <div class="experience-card p-12">
+                <i class="fa-solid fa-quote-left text-2xl mb-6 purple-text-metallic"></i>
+                <p class="text-champagne-highlight/60 text-sm leading-relaxed font-light">&ldquo;I have worked with Anuj in the same team for almost 2 years. He is a very good mentor and technically sound. He knows how to handle big projects and end to end requirements as it is kind of a recurring activity in Airtel due to large amount of subscriber base. He has an eye for analysis along with good hands on Automation Testing, Manual Testing and writing complex test cases for big enterprise applications in Telecom OSS/BSS domain.&rdquo;</p>
+                <div class="mt-8 pt-6 border-t mp-border">
+                    <p class="text-champagne-highlight font-bold text-sm">Akanksha C. Arora</p>
+                    <p class="text-[#A67C52] text-xs mt-1">Telecom Product Owner</p>
+                    <p class="text-[#A67C52]/60 text-[10px] uppercase tracking-widest mt-2">Teammate, Bharti Airtel &middot; LinkedIn recommendation</p>
+                </div>
+            </div>
+            <div class="experience-card p-12">
+                <i class="fa-solid fa-quote-left text-2xl mb-6 purple-text-metallic"></i>
+                <p class="text-champagne-highlight/60 text-sm leading-relaxed font-light">&ldquo;Anuj is an amazing professional, who brings all of the skills and expertise in programming and client handling. His effective soft skills and problem solving capabilities bring more power to his way of working.&rdquo;</p>
+                <div class="mt-8 pt-6 border-t mp-border">
+                    <p class="text-champagne-highlight font-bold text-sm">Vishal Chawla</p>
+                    <p class="text-[#A67C52] text-xs mt-1">Technical Architect</p>
+                    <p class="text-[#A67C52]/60 text-[10px] uppercase tracking-widest mt-2">Same team &middot; LinkedIn recommendation</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
     <section id="credentials" class="py-32 px-8 bg-[#050505]">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
@@ -359,7 +420,7 @@
         </div>
     </section>
 
-    <footer class="py-24 text-center border-t border-burnished-bronze/20 bg-[#020202]">
+    <footer class="py-24 text-center border-t mp-border bg-[#020202]">
         <img src="qalogo.png" alt="Logo" class="h-24 md:h-28 mx-auto mb-12 object-contain contrast-125 brightness-110">
         <p class="gold-text-metallic font-black uppercase tracking-[1em] text-[14px] mb-10">Anuj Gaba</p>
         <div class="flex justify-center space-x-12 text-2xl text-[#A67C52] mb-12">
